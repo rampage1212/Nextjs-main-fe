@@ -1,0 +1,26 @@
+@import "./vars.scss";
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.animated_line {
+	position: relative;
+}
+
+.animated_line::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background-color: $link-hover-color;
+	transition: width 0.5s, left 0.5s;
+}
+
+.animated_line:hover::after {
+	width: 100%;
+	left: 0;
+}

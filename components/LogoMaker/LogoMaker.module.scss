@@ -1,0 +1,34 @@
+@import "../../styles/vars.scss";
+
+.logo_maker {
+	position: relative;
+	transition: transform 300ms;
+}
+
+.main_letter_wrapper {
+	background-color: $link-hover-color;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 50%;
+	text-align: center;
+	font-weight: 900;
+	font-size: 1.85rem;
+	transition: transform 300ms;
+}
+
+.name_wrapper {
+	position: absolute;
+	left: 1.7rem;
+	top: 0.25rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	transition: transform 300ms;
+}
+
+.logo_maker:hover .main_letter_wrapper {
+	transform: scale(1.15);
+}
+
+.logo_maker:hover .name_wrapper {
+	transform: scale(0.9);
+}
