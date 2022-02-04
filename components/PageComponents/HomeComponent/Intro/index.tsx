@@ -1,11 +1,12 @@
 import utilsStyle from "../../../../styles/Utils.module.scss";
+import layoutStyle from "../../../Layout/Layout.module.scss";
 import Section from "../Section";
 import infoStyle from "./Intro.module.scss";
 
 const Intro = () => {
     return (
         <Section>
-            <div className={infoStyle.intro_section}>
+            <div className={`${infoStyle.intro_section} ${layoutStyle.section}`}>
                 <div className={utilsStyle.container}>
                     <div className={infoStyle.intro_container}>
                         <h4 className={infoStyle.name_title}>Hi! my name is</h4>

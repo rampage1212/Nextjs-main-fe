@@ -24,3 +24,14 @@
 	width: 100%;
 	left: 0;
 }
+
+.link {
+	color: $link-color;
+	font-weight: 600;
+	@extend .animated_line;
+	transition: color 0.5s;
+}
+
+.link:hover {
+	color: $link-hover-color;
+}

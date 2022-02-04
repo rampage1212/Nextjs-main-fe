@@ -5,7 +5,6 @@ import navbarStyles from "./Navbar.module.scss";
 
 
 const Navbar = () => {
-
     return (
         <>
 

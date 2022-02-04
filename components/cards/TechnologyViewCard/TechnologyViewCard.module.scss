@@ -1,0 +1,21 @@
+.technology_view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: transform 300ms;
+}
+
+.technology_view:hover {
+	transform: scale(1.02);
+	cursor: pointer;
+}
+
+.technology_view img {
+	margin-bottom: 0.5rem;
+	object-fit: contain;
+}
+
+.technology_name {
+	font-weight: 600;
+}

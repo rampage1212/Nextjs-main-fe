@@ -1,3 +1,36 @@
+@import "../../styles/Utils.module.scss";
+
 .body_container {
-	min-height: 100vh;
+	overflow: hidden;
+}
+
+.section_title {
+	font-weight: 700;
+	font-size: 1.75rem;
+	width: fit-content;
+	position: relative;
+}
+
+.section_title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background-color: $link-hover-color;
+	transition: width 0.5s, left 0.5s;
+}
+
+.section:hover .section_title::after {
+	width: 100%;
+	left: 0;
+}
+
+.section {
+	transition: transform 2s;
+}
+
+.section:hover {
+	transform: scale(1.02);
 }
