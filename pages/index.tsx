@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Hello! I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>HELLO !!</h1>
+
     </div>
   );
 };
