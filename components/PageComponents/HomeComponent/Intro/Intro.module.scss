@@ -1,0 +1,48 @@
+@import "../../../../styles/vars.scss";
+
+.intro_section {
+	background-image: linear-gradient(
+			180deg,
+			rgba(4, 28, 50, 1) 0%,
+			rgba(4, 28, 50, 0.65) 50%,
+			rgba(4, 28, 50, 1) 100%
+		),
+		url("./assets/image/nepal_mountain.jpg");
+	width: 100%;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.intro_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30vh 10%;
+
+	text-align: start;
+	transition: transform 2s;
+
+	.name_title {
+		font-size: 1rem;
+		line-height: 0.25rem;
+	}
+	.name {
+		font-size: 4rem;
+		line-height: 4.5rem;
+	}
+	.promise {
+		color: $lighter-text-color;
+	}
+
+	.brief_intro {
+		padding: 1rem 0;
+		font-size: 0.95rem;
+		max-width: 55%;
+	}
+
+	.resume_btn {
+		font-size: 1.2rem;
+	}
+}

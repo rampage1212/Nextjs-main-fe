@@ -1,0 +1,19 @@
+@import "../vars.scss";
+
+.btn {
+	border: 2px solid $link-color;
+	color: $link-color;
+	width: fit-content;
+	padding: 0.5rem 2rem;
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: color 300ms, border-color 300ms, background-color 300ms;
+	border-radius: 4px;
+}
+
+.btn:hover {
+	color: $main-text-color;
+	border-color: $link-hover-color;
+	background-color: $link-color;
+	box-shadow: 10px 10px 20px #ff9d0032;
+}
