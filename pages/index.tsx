@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-            <h3><Link href={"/test"}>New !!</Link></h3>
+            <h3><Link href={"/test"}>New !!</Link> Auto Update Check !!</h3>
           </a>
         </div>
       </main>
