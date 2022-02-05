@@ -31,6 +31,10 @@
 	transition: transform 2s;
 }
 
+.section_body {
+	margin: 0 2rem;
+}
+
 .section:hover {
 	transform: scale(1.02);
 }

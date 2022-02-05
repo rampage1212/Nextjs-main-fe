@@ -7,7 +7,6 @@ import navbarStyles from "./Navbar.module.scss";
 const Navbar = () => {
     return (
         <>
-
             <div className={navbarStyles.navigation_section}>
                 <div className={navbarStyles.top_navbar_container}>
                     <div className={utilsStyles.container}>
@@ -57,47 +56,47 @@ const Navbar = () => {
                                 href={"https://www.linkedin.com/in/vaskrneup/"}
                                 target="_blank"
                             >
-                                <i className="fab fa-linkedin"></i>
+                                <i className="fab fa-linkedin" aria-hidden></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                href={"https://www.linkedin.com/in/vaskrneup/"}
+                                href={"https://stackoverflow.com/users/10212936/vaskrneup"}
                                 target="_blank"
                             >
-                                <i className="fab fa-stack-overflow"></i>
+                                <i className="fab fa-stack-overflow" aria-hidden></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                href={"https://www.linkedin.com/in/vaskrneup/"}
+                                href={"https://github.com/vaskrneup"}
                                 target="_blank"
                             >
-                                <i className="fab fa-github"></i>
+                                <i className="fab fa-github" aria-hidden></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                href={"https://www.linkedin.com/in/vaskrneup/"}
+                                href={"https://instagram.com/vaskrneup"}
                                 target="_blank"
                             >
-                                <i className="fab fa-instagram"></i>
+                                <i className="fab fa-instagram" aria-hidden></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                href={"https://www.linkedin.com/in/vaskrneup/"}
+                                href={"https://twitter.com/vaskrneup/"}
                                 target="_blank"
                             >
-                                <i className="fab fa-twitter"></i>
+                                <i className="fab fa-twitter" aria-hidden></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                href={"https://www.linkedin.com/in/vaskrneup/"}
+                                href={"mailto:bhaskar@vaskrneup.com"}
                                 target="_blank"
                             >
-                                <i className="far fa-envelope"></i>
+                                <i className="far fa-envelope" aria-hidden></i>
                             </a>
                         </li>
                     </ul>

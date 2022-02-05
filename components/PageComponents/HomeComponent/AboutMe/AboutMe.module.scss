@@ -22,6 +22,7 @@
 	margin-left: 1rem;
 	flex: 1;
 	position: relative;
+	height: fit-content;
 
 	&::before {
 		content: "";
@@ -38,8 +39,15 @@
 
 	img {
 		width: 100%;
-		height: fit-content;
 	}
+}
+
+.technologies_grid {
+	display: grid;
+	grid-row-gap: 1.75rem;
+	grid-column-gap: 1rem;
+	grid-template-columns: auto auto auto;
+	padding: 2rem 0;
 }
 
 .about_me_section:hover .image_section::before {

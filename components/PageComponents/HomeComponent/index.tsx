@@ -1,11 +1,14 @@
 import AboutMe from "./AboutMe";
+import homeComponentsPropsDataType from "./dataTypes";
 import Intro from "./Intro";
 
-const HomeComponent = () => {
+const HomeComponent = (props: homeComponentsPropsDataType) => {
     return (
         <>
             <Intro />
-            <AboutMe />
+            <AboutMe
+                {...props}
+            />
         </>
     );
 };
