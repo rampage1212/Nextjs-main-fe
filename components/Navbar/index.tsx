@@ -1,6 +1,6 @@
 import Link from "next/link";
 import utilsStyles from "../../styles/Utils.module.scss";
-import LogoMaker from "../LogoMaker";
+import LogoMaker from "../utils/LogoMaker";
 import navbarStyles from "./Navbar.module.scss";
 
 
