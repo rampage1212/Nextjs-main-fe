@@ -15,7 +15,7 @@ const Intro = () => {
                             I build software solutions for your problems.
                         </h2>
                         <p className={infoStyle.brief_intro}>
-                            Hello! I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer.
+                            Hello! I&apos;m a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer.
                         </p>
                         <a
                             href="https://drive.google.com/file/d/1516EXritCUF9ReQJXspGLepwF6mNbaaz/view?usp=sharing"
