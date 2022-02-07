@@ -55,6 +55,7 @@ const Navbar = () => {
                             <a
                                 href={"https://www.linkedin.com/in/vaskrneup/"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="fab fa-linkedin" aria-hidden></i>
                             </a>
@@ -63,6 +64,7 @@ const Navbar = () => {
                             <a
                                 href={"https://stackoverflow.com/users/10212936/vaskrneup"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="fab fa-stack-overflow" aria-hidden></i>
                             </a>
@@ -71,6 +73,7 @@ const Navbar = () => {
                             <a
                                 href={"https://github.com/vaskrneup"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="fab fa-github" aria-hidden></i>
                             </a>
@@ -79,6 +82,7 @@ const Navbar = () => {
                             <a
                                 href={"https://instagram.com/vaskrneup"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="fab fa-instagram" aria-hidden></i>
                             </a>
@@ -87,6 +91,7 @@ const Navbar = () => {
                             <a
                                 href={"https://twitter.com/vaskrneup/"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="fab fa-twitter" aria-hidden></i>
                             </a>
@@ -95,6 +100,7 @@ const Navbar = () => {
                             <a
                                 href={"mailto:bhaskar@vaskrneup.com"}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <i className="far fa-envelope" aria-hidden></i>
                             </a>

@@ -20,6 +20,7 @@ const Intro = () => {
                         <a
                             href="https://drive.google.com/file/d/1516EXritCUF9ReQJXspGLepwF6mNbaaz/view?usp=sharing"
                             target={"_blank"}
+                            rel="noreferrer"
                             className={`${infoStyle.resume_btn} btn btn-link`}
                         >
                             RESUME

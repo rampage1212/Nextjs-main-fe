@@ -23,11 +23,11 @@ const AboutMe = (props: homeComponentsPropsDataType) => {
                                     Currently, I am working as a Full-Stack Developer using several Technologies. Additionally, I am learning about Machine and Deep Learning and am looking forward to learn hardware side of things too.
                                 </p>
                                 <p>
-                                    I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className={utilsStyles.link} >instagram</a>.
+                                    I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className={utilsStyles.link} rel="noreferrer">instagram</a>.
                                 </p>
 
                                 <p className={aboutMeStyles.technologies_title}>
-                                    Here are few Technologies I've worked with:
+                                    Here are few Technologies I&apos;ve worked with:
                                 </p>
 
                                 <div className={aboutMeStyles.technologies_grid}>
@@ -39,6 +39,7 @@ const AboutMe = (props: homeComponentsPropsDataType) => {
                                                         href={data.url}
                                                         key={data.url}
                                                         target={"_blank"}
+                                                        rel="noreferrer"
                                                     >
                                                         <TechnologyViewCard
                                                             image={data.icon}
