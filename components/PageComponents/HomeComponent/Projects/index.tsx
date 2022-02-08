@@ -1,6 +1,6 @@
 import Link from "next/link";
-import utilsStyles from "../../../../styles/Utils.module.scss";
 import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module.scss";
+import utilsStyles from "../../../../styles/Utils.module.scss";
 import ProjectViewCard from "../../../cards/ProjectsViewCard";
 import layoutStyles from "../../../Layout/Layout.module.scss";
 import homeComponentsPropsDataType from "../dataTypes";
@@ -26,6 +26,7 @@ const Projects = (props: homeComponentsPropsDataType) => {
                                 })
                         }
                     </div>
+
                     <div className={viewAllBtnStyles.view_all_btn}>
                         <Link href={"/"}>
                             <a>

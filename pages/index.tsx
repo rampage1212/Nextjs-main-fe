@@ -2,6 +2,7 @@ import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import HomeComponent from "../components/PageComponents/HomeComponent";
 import homeComponentsPropsDataType from "../components/PageComponents/HomeComponent/dataTypes";
+import { getBlogsData } from "../data/blogs";
 import { getProjectData } from "../data/projects";
 import TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST from "../data/technologiesWorkedWith";
 
@@ -26,6 +27,13 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       aboutMeData: TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST.map(data => data.data),
       projectsData: getProjectData(4).map(data => data.data),
+      blogsData: getBlogsData({
+        numberOfBlogs: 4,
+        query: {
+          key: "blogTitle",
+          value: "First"
+        },
+      }).map(data => data.data)
     }
   };
 };
