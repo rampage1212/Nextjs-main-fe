@@ -1,6 +1,7 @@
 import Link from "next/link";
 import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module.scss";
 import utilsStyles from "../../../../styles/Utils.module.scss";
+import BlogViewCard from "../../../cards/BlogsViewCard";
 import layoutStyles from "../../../Layout/Layout.module.scss";
 import homeComponentsPropsDataType from "../dataTypes";
 import blogStyles from "./Blogs.module.scss";
@@ -13,7 +14,17 @@ const Blogs = (props: homeComponentsPropsDataType) => {
                     <h3 className={layoutStyles.section_title}>Blogs</h3>
 
                     <div className={blogStyles.section_body}>
-
+                        {
+                            props.blogsData
+                                .map(blogData => {
+                                    return (
+                                        <BlogViewCard
+                                            key={blogData.id}
+                                            {...blogData}
+                                        />
+                                    );
+                                })
+                        }
                     </div>
 
                     <div className={viewAllBtnStyles.view_all_btn}>

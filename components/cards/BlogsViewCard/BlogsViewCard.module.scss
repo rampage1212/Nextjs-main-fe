@@ -1,0 +1,52 @@
+@import "../../../styles/vars.scss";
+
+.card_container {
+	width: 100%;
+	height: 18rem;
+	padding: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	transition: transform 300ms;
+	background-color: $cards-background-color;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+}
+
+.card_top {
+	.title {
+		font-size: 1.75rem;
+		color: $link-color;
+		text-align: center;
+		width: fit-content;
+		transition: color 300ms, transform 300ms;
+		margin-bottom: 0.75rem;
+	}
+
+	.title:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+		color: $link-hover-color;
+	}
+
+	.description {
+		font-size: 0.95rem;
+	}
+}
+
+.bottom_top {
+	margin: 0.5rem 0;
+	display: flex;
+	font-size: 0.8rem;
+	gap: 0.25rem;
+	flex-wrap: wrap;
+}
+
+.bottom_bottom {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.25rem 0.5rem 0 0.25rem;
+}
