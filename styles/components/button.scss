@@ -9,11 +9,13 @@
 	font-size: 0.9rem;
 	transition: color 300ms, border-color 300ms, background-color 300ms;
 	border-radius: 4px;
+	background: transparent;
 }
 
 .btn:hover {
+	cursor: pointer;
 	color: $main-text-color;
 	border-color: $link-hover-color;
-	background-color: $link-color;
+	background-color: $link-hover-color;
 	box-shadow: 10px 10px 20px #ff9d0032;
 }

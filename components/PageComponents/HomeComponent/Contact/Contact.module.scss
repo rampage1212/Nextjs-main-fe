@@ -1,0 +1,60 @@
+@import "../../../../styles/vars.scss";
+
+.contact_section {
+	margin-bottom: 2rem;
+}
+
+.section_body {
+	padding: $section-default-main-body-padding;
+}
+
+.personal_statement {
+	margin-bottom: 1rem;
+
+	a {
+		color: $link-color;
+		transition: color 300ms;
+		font-weight: 600;
+	}
+
+	a:hover {
+		color: $link-hover-color;
+	}
+}
+
+.form_container {
+	width: 100%;
+	background-color: $cards-background-color;
+	padding: 3rem 4rem;
+	border-radius: 1rem;
+
+	.row {
+		display: flex;
+		gap: 1rem;
+		margin: 1rem 0;
+
+		.input_container {
+			flex: 1;
+
+			label {
+				font-weight: 500;
+				font-size: 1.25rem;
+				margin: 0.2rem;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				outline: none;
+				padding: 0.75rem;
+				font-size: 1rem;
+				border-radius: 0.35rem;
+			}
+
+			input:focus,
+			textarea:focus {
+				background-color: #e5e2f0;
+			}
+		}
+	}
+}
