@@ -1,8 +1,10 @@
-import homeComponentsPropsDataType from "../dataTypes";
-import layoutStyles from "../../../Layout/Layout.module.scss";
+import Link from "next/link";
 import utilsStyles from "../../../../styles/Utils.module.scss";
-import projectStyles from "./Projects.module.scss";
+import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module.scss";
 import ProjectViewCard from "../../../cards/ProjectsViewCard";
+import layoutStyles from "../../../Layout/Layout.module.scss";
+import homeComponentsPropsDataType from "../dataTypes";
+import projectStyles from "./Projects.module.scss";
 
 const Projects = (props: homeComponentsPropsDataType) => {
     return (
@@ -23,6 +25,13 @@ const Projects = (props: homeComponentsPropsDataType) => {
                                     );
                                 })
                         }
+                    </div>
+                    <div className={viewAllBtnStyles.view_all_btn}>
+                        <Link href={"/"}>
+                            <a>
+                                VIEW ALL
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
