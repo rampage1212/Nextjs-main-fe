@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { URL_PATH } from "../../data/urlPath";
 import isBrowser from "../../helper/isBrowser";
 import utilsStyles from "../../styles/Utils.module.scss";
 import LogoMaker from "../utils/LogoMaker";
@@ -7,7 +8,7 @@ import navbarStyles from "./Navbar.module.scss";
 
 const getActiveStyleIfCurrentPage = (linkPath: string) => {
     if (isBrowser()) {
-        return window.location.pathname === linkPath ? navbarStyles.active_link : "";
+        return window.location.pathname.startsWith(linkPath) ? navbarStyles.active_link : "";
     }
     return "";
 };
@@ -41,23 +42,23 @@ const Navbar = () => {
                             </div>
 
                             <ul className={`${navbarStyles.navigation_links} ${navbarStyles.link_container}`}>
-                                <li className={activePageStyle("/about")}>
-                                    <Link href={"/"}>
+                                <li className={activePageStyle(URL_PATH.aboutMe())}>
+                                    <Link href={URL_PATH.aboutMe()}>
                                         <a>About</a>
                                     </Link>
                                 </li>
-                                <li className={activePageStyle("/projects")}>
-                                    <Link href={"/"}>
+                                <li className={activePageStyle(URL_PATH.projectsListView())}>
+                                    <Link href={URL_PATH.projectsListView()}>
                                         <a>Projects</a>
                                     </Link>
                                 </li>
-                                <li className={activePageStyle("/blog")}>
-                                    <Link href={"/"}>
+                                <li className={activePageStyle(URL_PATH.blogsListView())}>
+                                    <Link href={URL_PATH.blogsListView()}>
                                         <a>Blog</a>
                                     </Link>
                                 </li>
-                                <li className={activePageStyle("/contact")}>
-                                    <Link href={"/"}>
+                                <li className={activePageStyle(URL_PATH.contactMe())}>
+                                    <Link href={URL_PATH.contactMe()}>
                                         <a>Contact</a>
                                     </Link>
                                 </li>

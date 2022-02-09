@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { URL_PATH } from "../../../../data/urlPath";
 import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module.scss";
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import ProjectViewCard from "../../../cards/ProjectsViewCard";
@@ -21,7 +22,7 @@ const Projects = (props: homeComponentsPropsDataType | projectsListViewComponent
                             <h1
                                 className={layoutStyles.section_title}
                                 style={{
-                                    fontSize: "3rem",
+                                    fontSize: "2.5rem",
                                     marginBottom: "1rem"
                                 }}
                             >
@@ -48,7 +49,7 @@ const Projects = (props: homeComponentsPropsDataType | projectsListViewComponent
                         props.isHomePage ?
                             (
                                 <div className={viewAllBtnStyles.view_all_btn}>
-                                    <Link href={"/projects"}>
+                                    <Link href={URL_PATH.projectsListView()}>
                                         <a>
                                             VIEW ALL
                                         </a>

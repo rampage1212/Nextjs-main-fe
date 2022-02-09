@@ -2,17 +2,34 @@ import { technologiesWorkedWithPropsDataType } from "../../../../data/technologi
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import TechnologyViewCard from "../../../cards/TechnologyViewCard";
 import layoutStyles from "../../../Layout/Layout.module.scss";
+import AboutMePagesComponentPropsDataType from "../../AboutMePageComponent/dataType";
 import homeComponentsPropsDataType from "../dataTypes";
 import Section from "../Section";
 import aboutMeStyles from "./AboutMe.module.scss";
 
-const AboutMe = (props: homeComponentsPropsDataType) => {
+const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentPropsDataType) => {
     return (
         <Section>
             <div className={`${aboutMeStyles.about_me_section} ${layoutStyles.section}`} id="about-me">
                 <div className={utilsStyles.container}>
                     <div className={layoutStyles.section_body}>
-                        <h3 className={layoutStyles.section_title}>About Me</h3>
+                        {
+                            props.isHomePage ? (
+                                <h3 className={layoutStyles.section_title}>
+                                    About Me
+                                </h3>
+                            ) : (
+                                <h1
+                                    className={layoutStyles.section_title}
+                                    style={{
+                                        fontSize: "2.5rem",
+                                        marginBottom: "1rem"
+                                    }}
+                                >
+                                    About Me
+                                </h1>
+                            )
+                        }
 
                         <div className={`${aboutMeStyles.section_body}`}>
                             <div className={aboutMeStyles.data_section}>
