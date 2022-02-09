@@ -14,7 +14,7 @@ const Contact = () => {
                             Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className={utilsStyles.animated_line} >bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
                         </p>
                         <div className={contactStyle.form_container}>
-                            <form action="/">
+                            <form action="https://formsubmit.co/bhaskar@vaskrneup.com" method="POST">
                                 <div className={contactStyle.row}>
                                     <div className={contactStyle.input_container}>
                                         <label htmlFor="full_name">Full Name</label>
