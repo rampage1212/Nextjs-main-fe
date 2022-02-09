@@ -1,10 +1,26 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import isBrowser from "../../helper/isBrowser";
 import utilsStyles from "../../styles/Utils.module.scss";
 import LogoMaker from "../utils/LogoMaker";
 import navbarStyles from "./Navbar.module.scss";
 
+const getActiveStyleIfCurrentPage = (linkPath: string) => {
+    if (isBrowser()) {
+        return window.location.pathname === linkPath ? navbarStyles.active_link : "";
+    }
+    return "";
+};
 
 const Navbar = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    });
+
+    const activePageStyle = mounted ? getActiveStyleIfCurrentPage : (_: string) => "";
+
     return (
         <>
             <div className={navbarStyles.navigation_section}>
@@ -25,22 +41,22 @@ const Navbar = () => {
                             </div>
 
                             <ul className={`${navbarStyles.navigation_links} ${navbarStyles.link_container}`}>
-                                <li>
+                                <li className={activePageStyle("/about")}>
                                     <Link href={"/"}>
                                         <a>About</a>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className={activePageStyle("/projects")}>
                                     <Link href={"/"}>
                                         <a>Projects</a>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className={activePageStyle("/blog")}>
                                     <Link href={"/"}>
                                         <a>Blog</a>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className={activePageStyle("/contact")}>
                                     <Link href={"/"}>
                                         <a>Contact</a>
                                     </Link>

@@ -6,4 +6,5 @@ export default interface homeComponentsPropsDataType {
     aboutMeData: technologiesWorkedWithPropsDataType[];
     projectsData: projectDataContainerPropsDataType[];
     blogsData: blogDataContainerDataType[];
+    isHomePage: boolean;
 }

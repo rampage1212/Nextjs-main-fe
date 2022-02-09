@@ -33,7 +33,8 @@ export const getStaticProps: GetStaticProps = async () => {
           key: "blogTitle",
           value: "First"
         },
-      }).map(data => data.data)
+      }).map(data => data.data),
+      isHomePage: true,
     }
   };
 };

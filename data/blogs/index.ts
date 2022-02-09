@@ -1,4 +1,4 @@
-import query from "../../utils/query";
+import query from "../../helper/query";
 import BlogDataContainer, { getBlogsDataPropsDataType } from "./dataTypes";
 
 const BLOG_DATA: BlogDataContainer[] = [

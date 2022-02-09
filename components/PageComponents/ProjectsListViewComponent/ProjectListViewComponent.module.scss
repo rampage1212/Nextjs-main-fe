@@ -1,0 +1,19 @@
+@import "../../../styles/vars.scss";
+
+.container {
+	padding: 0 1rem;
+}
+
+.title {
+	font-size: 3rem;
+	margin-top: 1rem;
+}
+
+.projects_grid {
+	padding: $section-default-main-body-padding;
+	display: grid;
+	grid-row-gap: 1.75rem;
+	grid-column-gap: 1rem;
+	grid-template-columns: repeat(2, 50%);
+	margin: 2rem 0;
+}

@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Layout>
+      <Layout setMinHeightOfScreen={true}>
         <Component {...pageProps} />
       </Layout>
     </>

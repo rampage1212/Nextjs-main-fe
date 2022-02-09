@@ -1,6 +1,6 @@
-import contactStyle from "./Contact.module.scss";
-import layoutStyles from "../../../Layout/Layout.module.scss";
 import utilsStyles from "../../../../styles/Utils.module.scss";
+import layoutStyles from "../../../Layout/Layout.module.scss";
+import contactStyle from "./Contact.module.scss";
 
 const Contact = () => {
     return (

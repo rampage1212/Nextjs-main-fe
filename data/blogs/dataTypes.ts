@@ -1,4 +1,4 @@
-import queryDataType from "../../utils/query/dataTypes";
+import queryDataType from "../../helper/query/dataTypes";
 import DataManager from "../manager";
 
 export interface blogDataContainerDataType {
