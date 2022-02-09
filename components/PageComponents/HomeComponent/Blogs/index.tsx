@@ -3,15 +3,34 @@ import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import BlogViewCard from "../../../cards/BlogsViewCard";
 import layoutStyles from "../../../Layout/Layout.module.scss";
+import blogListViewPropsDataType from "../../BlogsListVIewComponent/dataType";
 import homeComponentsPropsDataType from "../dataTypes";
 import blogStyles from "./Blogs.module.scss";
 
-const Blogs = (props: homeComponentsPropsDataType) => {
+const Blogs = (props: homeComponentsPropsDataType | blogListViewPropsDataType) => {
     return (
         <div className={`${layoutStyles.section} ${blogStyles.blogs_section}`}>
             <div className={utilsStyles.container}>
                 <div className={layoutStyles.section_body}>
-                    <h3 className={layoutStyles.section_title}>Blogs</h3>
+                    {
+                        props.isHomePage ? (
+                            <h3
+                                className={layoutStyles.section_title}
+                            >
+                                Blogs
+                            </h3>
+                        ) : (
+                            <h1
+                                className={layoutStyles.section_title}
+                                style={{
+                                    fontSize: "2.5rem",
+                                    marginBottom: "1rem"
+                                }}
+                            >
+                                Blogs
+                            </h1>
+                        )
+                    }
 
                     <div className={blogStyles.section_body}>
                         {
@@ -27,13 +46,17 @@ const Blogs = (props: homeComponentsPropsDataType) => {
                         }
                     </div>
 
-                    <div className={viewAllBtnStyles.view_all_btn}>
-                        <Link href={"/"}>
-                            <a>
-                                VIEW ALL
-                            </a>
-                        </Link>
-                    </div>
+                    {
+                        props.isHomePage ? (
+                            <div className={viewAllBtnStyles.view_all_btn}>
+                                <Link href={"/"}>
+                                    <a>
+                                        VIEW ALL
+                                    </a>
+                                </Link>
+                            </div>
+                        ) : undefined
+                    }
                 </div>
             </div>
         </div>
