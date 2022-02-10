@@ -1,0 +1,128 @@
+@import "../../../styles/vars.scss";
+@import "../../../styles/Utils.module.scss";
+
+.line_under {
+	position: relative;
+	padding-bottom: 0.5rem;
+
+	&::after {
+		content: "";
+		position: absolute;
+		background-color: $profile-pic-background-color;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		opacity: 0.6;
+	}
+}
+
+.markdown_container {
+	margin: 0 2rem;
+	// TYPOGRAPHY
+	h1 {
+		font-size: 3.25rem;
+		margin-bottom: 3rem;
+		font-weight: 700;
+		text-align: center;
+		@extend .line_under;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
+		@extend .line_under;
+	}
+
+	h3 {
+		font-size: 2rem;
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+		@extend .line_under;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+		margin-top: 0.75rem;
+		margin-bottom: 0.25rem;
+	}
+
+	h6 {
+		font-size: 0.75rem;
+		margin-top: 0.25rem;
+	}
+
+	p {
+		margin: 1rem 0;
+	}
+
+	ul {
+		list-style-type: "- ";
+		margin: 0 2rem;
+	}
+
+	code {
+		margin: 1rem 0;
+	}
+
+	code:not([class]) {
+		background-color: rgb(38, 50, 56);
+		padding: 0.1rem 0.2rem;
+		border-radius: 0.25rem;
+
+		&::before {
+			content: "`";
+		}
+
+		&::after {
+			content: "`";
+		}
+	}
+	// END TYPOGRAPHY
+
+	// LINK !!
+	a {
+		@extend .link;
+	}
+	// END LINK !!
+
+	// TABLE !!
+	table,
+	th,
+	td {
+		border: 1px solid $main-text-color;
+		border-collapse: collapse;
+	}
+
+	td,
+	th {
+		padding: 0.25rem 0.5rem;
+		max-width: 12rem;
+		min-width: 7rem;
+	}
+
+	tr {
+		transition: background-color 300ms;
+
+		&:nth-child(even) {
+			background-color: $table-bg-color;
+		}
+
+		&:hover {
+			background-color: $profile-pic-background-color;
+		}
+	}
+	// END TABLE !!
+}
+
+.apple {
+	background-color: red;
+}

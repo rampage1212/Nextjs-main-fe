@@ -4,7 +4,6 @@ import projectDetailViewPropsDataType from "../../../components/PageComponents/P
 import { getProjectData, PROJECT_DATA } from "../../../data/projects";
 import matter from 'gray-matter';
 import Head from "next/head";
-import markdownRenderer from "../../../helper/markdownRenderer";
 
 const ProjectDetailView = (props: projectDetailViewPropsDataType) => {
     return (
@@ -51,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
             markdownData: {
                 rawMarkdown: parsedMarkdown.content,
                 data: parsedMarkdown.data,
-                parsedMarkdownHTML: await markdownRenderer(parsedMarkdown.content),
+                parsedMarkdownHTML: "",
             },
         }
     };
