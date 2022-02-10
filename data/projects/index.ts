@@ -6,7 +6,7 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
         {
             id: "spreadsheet",
             mainLink: "https://sheets.vaskrneup.com/",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: "https://raw.githubusercontent.com/vercel/next.js/canary/docs/getting-started.md",
             projectImage: "/assets/images/project_demos/spreadsheet.png",
             projectName: "Spreadsheet",
             projectFor: "Leapfrog Technology, Internship",
