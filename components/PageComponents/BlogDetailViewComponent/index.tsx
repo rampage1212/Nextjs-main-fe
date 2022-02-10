@@ -1,10 +1,9 @@
-// materialOceanic,tomorrow,vscDarkPlus
+import blogDetailViewPropsDataType from "./dataTypes";
 import utilsStyles from "../../../styles/Utils.module.scss";
 import layoutStyles from "../../Layout/Layout.module.scss";
 import MarkdownRenderer from "../../utils/MarkdownRenderer";
-import projectDetailViewPropsDataType from "./dataTypes";
 
-const ProjectDetailViewComponent = (props: projectDetailViewPropsDataType) => {
+const BlogDetailViewComponent = (props: blogDetailViewPropsDataType) => {
     return (
         <div className={layoutStyles.section}>
             <div className={utilsStyles.container}>
@@ -16,4 +15,4 @@ const ProjectDetailViewComponent = (props: projectDetailViewPropsDataType) => {
     );
 };
 
-export default ProjectDetailViewComponent;
+export default BlogDetailViewComponent;

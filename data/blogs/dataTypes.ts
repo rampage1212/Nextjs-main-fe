@@ -2,7 +2,7 @@ import queryDataType from "../../helper/query/dataTypes";
 import DataManager from "../manager";
 
 export interface blogDataContainerDataType {
-    id: string | number,
+    id: string,
     blogTitle: string,
     blogDescription: string,
     blogTags: string[],

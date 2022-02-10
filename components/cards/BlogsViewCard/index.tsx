@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { blogDataContainerDataType } from "../../../data/blogs/dataTypes";
+import { URL_PATH } from "../../../data/urlPath";
 import Chip from "../../utils/Chip";
 import Hr from "../../utils/Hr";
 import blogViewCardStyles from "./BlogsViewCard.module.scss";
@@ -9,8 +10,10 @@ const BlogViewCard = (props: blogDataContainerDataType) => {
         <div className={blogViewCardStyles.card_container}>
             <div className={blogViewCardStyles.card_top}>
                 <h3 className={blogViewCardStyles.title}>
-                    <Link href={"/"}>
-                        {props.blogTitle}
+                    <Link href={URL_PATH.blogsDetailView(props.id)}>
+                        <a>
+                            {props.blogTitle}
+                        </a>
                     </Link>
                 </h3>
                 <p className={blogViewCardStyles.description}>{props.blogDescription}</p>
