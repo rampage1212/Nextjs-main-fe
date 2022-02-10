@@ -18,7 +18,7 @@ const Navbar = () => {
 
     useEffect(() => {
         setMounted(true);
-    });
+    }, []);
 
     const activePageStyle = mounted ? getActiveStyleIfCurrentPage : (_: string) => "";
 
