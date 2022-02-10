@@ -53,7 +53,7 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                             );
                         } else {
                             return (
-                                <a className={className} {...props}>
+                                <a className={className} target="_blank" {...props}>
                                     {children}
                                 </a>
                             );
