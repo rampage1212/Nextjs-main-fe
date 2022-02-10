@@ -1,7 +1,8 @@
+import queryDataType from "../../helper/query/dataTypes";
 import DataManager from "../manager";
 
 export interface projectDataContainerPropsDataType {
-    id: string | number;
+    id: string;
     projectImage: string;
     projectName: string;
     projectFor: string;
@@ -13,6 +14,10 @@ export interface projectDataContainerPropsDataType {
     projectTags: string[];
 }
 
+export interface getBlogsDataPropsDataType {
+    numberOfProjects: number;
+    query?: queryDataType;
+}
 class ProjectDataContainer extends DataManager {
     constructor(public data: projectDataContainerPropsDataType) {
         super(data);

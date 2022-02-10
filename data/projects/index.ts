@@ -1,4 +1,5 @@
-import ProjectDataContainer from "./dataTypes";
+import query from "../../helper/query";
+import ProjectDataContainer, { getBlogsDataPropsDataType } from "./dataTypes";
 
 export const PROJECT_DATA: ProjectDataContainer[] = [
     new ProjectDataContainer(
@@ -149,6 +150,14 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
 ];
 
 
-export const getProjectData = (numberOfProjects: number): ProjectDataContainer[] => {
-    return PROJECT_DATA.slice(0, numberOfProjects);
+export const getProjectData = (data: getBlogsDataPropsDataType): ProjectDataContainer[] => {
+    if (data.query) {
+        return <ProjectDataContainer[]>query({
+            data: PROJECT_DATA,
+            query: data.query,
+            wrapper: ProjectDataContainer
+        }).slice(0, data.numberOfProjects);
+    } else {
+        return PROJECT_DATA.slice(0, data.numberOfProjects);
+    }
 };

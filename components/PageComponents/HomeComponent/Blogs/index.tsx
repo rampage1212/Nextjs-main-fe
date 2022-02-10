@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { URL_PATH } from "../../../../data/urlPath";
 import viewAllBtnStyles from "../../../../styles/components/ViewAllButton.module.scss";
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import BlogViewCard from "../../../cards/BlogsViewCard";
@@ -49,7 +50,7 @@ const Blogs = (props: homeComponentsPropsDataType | blogListViewPropsDataType) =
                     {
                         props.isHomePage ? (
                             <div className={viewAllBtnStyles.view_all_btn}>
-                                <Link href={"/"}>
+                                <Link href={URL_PATH.blogsListView()}>
                                     <a>
                                         VIEW ALL
                                     </a>

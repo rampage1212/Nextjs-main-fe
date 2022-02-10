@@ -1,8 +1,9 @@
 import sectionPropsDataType from "./dataTypes";
+import sectionStyles from "./Section.module.scss";
 
 const Section = (props: sectionPropsDataType) => {
     return (
-        <div>
+        <div className={sectionStyles.section}>
             {props.children}
         </div>
     );

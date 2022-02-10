@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { useState } from "react";
 import { projectDataContainerPropsDataType } from "../../../data/projects/dataTypes";
+import { URL_PATH } from "../../../data/urlPath";
 import Chip from "../../utils/Chip";
 import Hr from "../../utils/Hr";
 import projectViewCardStyles from "./ProjectViewCard.module.scss";
@@ -35,7 +37,13 @@ const ProjectViewCard = (props: projectDataContainerPropsDataType) => {
         >
             <div className={projectViewCardStyles.card_top}>
                 <div className={projectViewCardStyles.top_left}>
-                    <h3 className={projectViewCardStyles.project_name}>{props.projectName}</h3>
+                    <h3 className={projectViewCardStyles.project_name}>
+                        <Link href={URL_PATH.projectsDetailView(props.id)}>
+                            <a>
+                                {props.projectName}
+                            </a>
+                        </Link>
+                    </h3>
                     <h5 className={projectViewCardStyles.project_for}>{props.projectFor}</h5>
                 </div>
                 <div className={projectViewCardStyles.top_right}>

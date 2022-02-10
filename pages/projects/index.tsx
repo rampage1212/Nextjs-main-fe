@@ -14,7 +14,7 @@ const Projects = (props: projectsListViewComponentsPropsDataType) => {
 export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
-            projectsData: getProjectData(99).map(data => data.data),
+            projectsData: getProjectData({ numberOfProjects: 99 }).map(data => data.data),
             isHomePage: false,
         }
     };
