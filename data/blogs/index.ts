@@ -9,7 +9,8 @@ const BLOG_DATA: BlogDataContainer[] = [
         blogTags: ["blog", "test"],
         creationDate: "Jan 17, 2022",
         readTime: "3 Min",
-        blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/main-fe/main/src/blog_data/testBlog.md"
+        blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/main-fe/main/src/blog_data/testBlog.md",
+        imageUrl: "/assets/images/blogs/first-blog.jpg"
     }),
 ];
 

@@ -2,13 +2,14 @@ import queryDataType from "../../helper/query/dataTypes";
 import DataManager from "../manager";
 
 export interface blogDataContainerDataType {
-    id: string,
-    blogTitle: string,
-    blogDescription: string,
+    id: string;
+    blogTitle: string;
+    blogDescription: string;
     blogTags: string[],
-    creationDate: string,
-    readTime: string,
+    creationDate: string;
+    readTime: string;
     blogMarkdownLink: string;
+    imageUrl?: string;
 }
 
 export interface getBlogsDataPropsDataType {

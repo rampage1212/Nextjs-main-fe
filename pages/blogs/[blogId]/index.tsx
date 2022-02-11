@@ -14,7 +14,7 @@ const BlogDetailPage = (props: blogDetailViewPropsDataType) => {
                 baseMetaData={{
                     author: "Bhaskar Neupane",
                     description: props.blogData.blogDescription,
-                    // imageUrl: props.blogData.blogImage,
+                    imageUrl: props.blogData.imageUrl,
                     title: props.blogData.blogTitle,
                     type: "blog",
                     url: "https://vaskrneup.com"
