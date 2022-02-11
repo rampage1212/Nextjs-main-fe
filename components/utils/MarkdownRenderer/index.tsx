@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import remarkGfm from 'remark-gfm';
+import { URL_PATH } from "../../../data/urlPath";
 import markdownRendererStyles from "./MarkdownRenderer.module.scss";
 
 const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
@@ -14,7 +15,10 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                 setStyleManager(theme.materialOceanic);
             });
     });
-
+    const restMD = `
+# apple
+[a relative link](>projectsDetailView#spreadsheet)
+    `;
     return (
         <div className={markdownRendererStyles.markdown_container}>
             <ReactMarkdown
@@ -51,6 +55,18 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                                     </a>
                                 </Link>
                             );
+                        } else if (props.href?.startsWith("%3E")) {
+                            const _href = props.href?.substring(3);
+                            const [func, parameter] = _href.split("#");
+                            const parsedUrl = URL_PATH[func as ("projectsDetailView" | "blogsDetailView")](parameter);
+
+                            return (
+                                <Link href={parsedUrl}>
+                                    <a className={className}>
+                                        {children}
+                                    </a>
+                                </Link>
+                            );
                         } else {
                             return (
                                 <a className={className} target="_blank" {...props}>
@@ -60,7 +76,7 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                         }
                     }
                 }}
-            >{rawMarkdown}</ReactMarkdown>
+            >{restMD}</ReactMarkdown>
         </div>
     );
 };
