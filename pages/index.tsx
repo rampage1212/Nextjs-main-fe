@@ -2,33 +2,31 @@ import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import HomeComponent from "../components/PageComponents/HomeComponent";
 import homeComponentsPropsDataType from "../components/PageComponents/HomeComponent/dataTypes";
+import MetaManager from "../components/utils/MetaManager";
 import { getBlogsData } from "../data/blogs";
+import { MY_PICTURE_URL, FAVICON_DEFAULT_URL } from "../data/constants";
 import { getProjectData } from "../data/projects";
 import TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST from "../data/technologiesWorkedWith";
 
 const Home = (props: homeComponentsPropsDataType) => {
   return (
     <div>
-      <Head>
-        <title>Bhaskar Neupane</title>
-        <meta name="description" content="Hello! I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer." />
-        <meta name="keywords" content="vaskrneup, Bhaskar Neupane, Freelancer, Developer, Programmer" />
-        <meta name="author" content="Bhaskar Neupane" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://vaskrneup.com" />
-        <meta property="og:title" content="Bhaskar Neupane" />
-        <meta property="og:description" content="Hello! I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer" />
-        <meta property="og:image" content="/me.jpg" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://vaskrneup.com" />
-        <meta property="twitter:title" content="Bhaskar Neupane" />
-        <meta property="twitter:description" content="Hello! I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer" />
-        <meta property="twitter:image" content="/me.jpg" />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <MetaManager
+        title="Bhaskar Neupane"
+        favIconUrl={FAVICON_DEFAULT_URL}
+        keywords={["vaskrneup", "Bhaskar Neupane", "Freelancer", "Developer", "Programmer", "Photographer"]}
+        twitterSpecificMetaData={{
+          card: "summary_large_image"
+        }}
+        baseMetaData={{
+          title: "Bhaskar Neupane",
+          author: "Bhaskar Neupane",
+          description: "I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer.",
+          imageUrl: MY_PICTURE_URL,
+          type: "website",
+          url: "https://vaskrneup.com"
+        }}
+      />
 
       <HomeComponent
         {...props}

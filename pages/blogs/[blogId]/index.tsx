@@ -3,14 +3,27 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import BlogDetailViewComponent from "../../../components/PageComponents/BlogDetailViewComponent";
 import blogDetailViewPropsDataType from "../../../components/PageComponents/BlogDetailViewComponent/dataTypes";
+import MetaManager from "../../../components/utils/MetaManager";
 import BLOG_DATA, { getBlogsData } from "../../../data/blogs";
 
 const BlogDetailPage = (props: blogDetailViewPropsDataType) => {
     return (
         <>
-            <Head>
-
-            </Head>
+            <MetaManager
+                title={props.blogData.blogTitle}
+                baseMetaData={{
+                    author: "Bhaskar Neupane",
+                    description: props.blogData.blogDescription,
+                    // imageUrl: props.blogData.blogImage,
+                    title: props.blogData.blogTitle,
+                    type: "blog",
+                    url: "https://vaskrneup.com"
+                }}
+                keywords={props.blogData.blogTags}
+                twitterSpecificMetaData={{
+                    card: "summary_large_image"
+                }}
+            />
 
             <BlogDetailViewComponent
                 {...props}

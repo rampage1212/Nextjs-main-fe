@@ -1,20 +1,29 @@
+import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import ProjectDetailViewComponent from "../../../components/PageComponents/ProjectDetailView";
 import projectDetailViewPropsDataType from "../../../components/PageComponents/ProjectDetailView/dataTypes";
+import MetaManager from "../../../components/utils/MetaManager";
 import { getProjectData, PROJECT_DATA } from "../../../data/projects";
-import matter from 'gray-matter';
-import Head from "next/head";
 
 const ProjectDetailView = (props: projectDetailViewPropsDataType) => {
     return (
         <>
-            <Head>
-                <title>{props.projectData.projectName}</title>
-                <meta
-                    name="description"
-                    content={props.projectData.projectDescription}
-                />
-            </Head>
+            <MetaManager
+                title={props.projectData.projectName}
+                baseMetaData={{
+                    author: "Bhaskar Neupane",
+                    description: props.projectData.projectDescription,
+                    imageUrl: props.projectData.projectImage,
+                    title: props.projectData.projectName,
+                    type: "blog",
+                    url: "https://vaskrneup.com"
+                }}
+                keywords={props.projectData.projectTags}
+                twitterSpecificMetaData={{
+                    card: "summary_large_image"
+                }}
+            />
 
             <ProjectDetailViewComponent
                 {...props}
