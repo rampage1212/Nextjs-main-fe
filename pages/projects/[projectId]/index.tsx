@@ -37,16 +37,18 @@ const getRawMarkdown = async (markdownPathOrUrl: string) => {
     let markdownData = undefined;
 
     if (markdownPathOrUrl.startsWith("/")) {
-        const filePath = `${getConfig().serverRuntimeConfig?.basePath}\\public\\${markdownPathOrUrl}`.replaceAll("\\", "/");
+        const filePath = `${getConfig().serverRuntimeConfig?.basePath}\\public\\${markdownPathOrUrl}`
+            .replaceAll("\\", "/");
 
         markdownData = fs.readFileSync(
             filePath,
             "utf8"
         );
-        console.log(markdownData);
+        // console.log(markdownData);
     } else {
         markdownData = await fetch(markdownPathOrUrl).then(res => res.text());
     }
+
     return markdownData;
 };
 
