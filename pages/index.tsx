@@ -1,11 +1,9 @@
 import type { GetStaticProps } from 'next';
-import getConfig from "next/config";
-import Head from 'next/head';
 import HomeComponent from "../components/PageComponents/HomeComponent";
 import homeComponentsPropsDataType from "../components/PageComponents/HomeComponent/dataTypes";
 import MetaManager from "../components/utils/MetaManager";
 import { getBlogsData } from "../data/blogs";
-import { MY_PICTURE_URL, FAVICON_DEFAULT_URL } from "../data/constants";
+import { FAVICON_DEFAULT_URL, MY_PICTURE_URL } from "../data/constants";
 import { getProjectData } from "../data/projects";
 import TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST from "../data/technologiesWorkedWith";
 

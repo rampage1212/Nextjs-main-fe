@@ -3,6 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	serverRuntimeConfig: {
 		isDev: true,
+		basePath: __dirname,
 	},
 };
 

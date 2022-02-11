@@ -40,7 +40,7 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
         {
             id: "kpn-staff-management-app",
             mainLink: "https://kkpn.pythonanywhere.com/",
-            projectDetailsMarkdownLink: `${BASE_URL}/docs/projects/kpn_admin.md`,
+            projectDetailsMarkdownLink: `/docs/projects/kpn_admin.md`,
             projectImage: "/assets/images/project_demos/kpn_admin.png",
             projectName: "KPN Admin",
             projectFor: "K.P.N. & Associates",

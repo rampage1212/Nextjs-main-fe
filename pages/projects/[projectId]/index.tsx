@@ -1,10 +1,11 @@
 import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
 import ProjectDetailViewComponent from "../../../components/PageComponents/ProjectDetailView";
 import projectDetailViewPropsDataType from "../../../components/PageComponents/ProjectDetailView/dataTypes";
 import MetaManager from "../../../components/utils/MetaManager";
 import { getProjectData, PROJECT_DATA } from "../../../data/projects";
+import fs from "fs";
+import getConfig from "next/config";
 
 const ProjectDetailView = (props: projectDetailViewPropsDataType) => {
     return (
@@ -34,7 +35,18 @@ const ProjectDetailView = (props: projectDetailViewPropsDataType) => {
 
 const getRawMarkdown = async (markdownPathOrUrl: string) => {
     let markdownData = undefined;
-    markdownData = await fetch(markdownPathOrUrl).then(res => res.text());
+
+    if (markdownPathOrUrl.startsWith("/")) {
+        const filePath = `${getConfig().serverRuntimeConfig?.basePath}\\public\\${markdownPathOrUrl}`.replaceAll("\\", "/");
+
+        markdownData = fs.readFileSync(
+            filePath,
+            "utf8"
+        );
+        console.log(markdownData);
+    } else {
+        markdownData = await fetch(markdownPathOrUrl).then(res => res.text());
+    }
     return markdownData;
 };
 
