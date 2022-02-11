@@ -15,10 +15,7 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                 setStyleManager(theme.materialOceanic);
             });
     });
-    const restMD = `
-# apple
-[a relative link](>projectsDetailView#spreadsheet)
-    `;
+
     return (
         <div className={markdownRendererStyles.markdown_container}>
             <ReactMarkdown
@@ -76,7 +73,7 @@ const MarkdownRenderer = ({ rawMarkdown }: { rawMarkdown: string; }) => {
                         }
                     }
                 }}
-            >{restMD}</ReactMarkdown>
+            >{rawMarkdown}</ReactMarkdown>
         </div>
     );
 };
