@@ -1,6 +1,7 @@
 import urlPathDataType from "./dataTypes";
 
 export const URL_PATH: urlPathDataType = {
+    homePage: () => "/",
     aboutMe: () => "/about-me",
     projectsListView: () => "/projects",
     projectsDetailView: (projectId: string) => `/projects/${projectId}`,

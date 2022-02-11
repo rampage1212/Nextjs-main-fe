@@ -1,4 +1,5 @@
 export default interface urlPathDataType {
+    homePage: (_?: string) => string;
     aboutMe: (_?: string) => string;
     projectsListView: (_?: string) => string;
     projectsDetailView: (projectId: string) => string;

@@ -1,6 +1,7 @@
 import BLOG_DATA from "../../data/blogs";
 import { PROJECT_DATA } from "../../data/projects";
 import { URL_PATH } from "../../data/urlPath";
+import getSitemapUrlPropsDataType from "./dataTypes";
 
 export const getFullUrl = (path: string) => {
     return `https://vaskrneup.com${path}`;
@@ -16,16 +17,8 @@ const SITEMAP_CREATION_DATA = [
     ...BLOG_DATA.map(data => ({ url: getFullUrl(URL_PATH.blogsDetailView(data.data.id)) })),
 ];
 
-export const getSitemapUrl = (
-    {
-        loc, lastmod = "2022-01-26", changefreq = "weekly", priority = "0.80"
-    }: {
-        loc: string,
-        lastmod?: string,
-        changefreq?: string,
-        priority?: string;
-    }
-): string => {
+export const getSitemapUrl = ({ loc, lastmod = "2022-01-26", changefreq = "weekly", priority = "0.80"
+}: getSitemapUrlPropsDataType): string => {
     let url = "<url>";
     url += `<loc>${loc}</loc>`;
 
@@ -50,7 +43,7 @@ const siteMapGenerator = () => {
         sitemap += getSitemapUrl({
             loc: data.url,
             priority: data.priority,
-            lastmod: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}`
+            lastmod: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
         });
     });
 

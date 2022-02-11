@@ -1,0 +1,25 @@
+@import "../../../styles/vars.scss";
+
+.error_container {
+	padding: 10vh 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+}
+
+.title {
+	font-size: 18rem;
+	color: $lighter-text-color;
+}
+
+.message {
+	font-size: 3rem;
+}
+
+.description {
+	font-size: 1rem;
+	padding: 1rem 0;
+}
