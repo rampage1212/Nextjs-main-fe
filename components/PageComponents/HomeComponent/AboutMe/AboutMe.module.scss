@@ -1,8 +1,15 @@
 @import "../../../../styles/vars.scss";
 
 .section_body {
-	display: flex;
 	padding: $section-default-main-body-padding;
+}
+
+.image_top {
+	display: none;
+}
+
+.section_body_main {
+	display: flex;
 }
 
 .data_section {
@@ -54,4 +61,34 @@
 	right: -1rem;
 	bottom: -0.75rem;
 	background-color: $profile-pic-background-color;
+}
+
+@media screen and (max-width: 800px) {
+	.image_top {
+		display: unset;
+	}
+
+	.image_section {
+		margin-left: 0;
+		width: 50%;
+		margin: 0 auto 1.5rem auto;
+	}
+
+	.section_body_main {
+		margin-top: 1rem;
+	}
+
+	.technologies_grid {
+		grid-template-columns: auto auto;
+	}
+
+	.image_bottom {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.technologies_grid {
+		grid-template-columns: auto;
+	}
 }

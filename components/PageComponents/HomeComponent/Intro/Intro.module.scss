@@ -23,7 +23,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 30vh 10%;
+	padding: 23vh 10%;
 
 	text-align: start;
 	transition: transform 2s;
@@ -48,5 +48,25 @@
 
 	.resume_btn {
 		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.intro_container {
+		padding: 20vh 10%;
+
+		.brief_intro {
+			max-width: 75%;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.intro_container {
+		padding: 15vh 10%;
+	}
+
+	.brief_intro {
+		max-width: 90%;
 	}
 }

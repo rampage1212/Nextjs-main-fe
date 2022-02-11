@@ -40,5 +40,17 @@
 }
 
 .section:hover {
-	transform: scale(1.005);
+	transform: scale(1);
+}
+
+@media screen and (max-width: 800px) {
+	.section_body {
+		margin: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.section_body {
+		margin: 0 0.25rem;
+	}
 }

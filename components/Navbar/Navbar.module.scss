@@ -112,3 +112,20 @@
 		background-color: $main-text-color;
 	}
 }
+
+@media screen and (max-width: 1160px) {
+	.bottom_navbar_container {
+		.bottom_navigation_link {
+			display: flex;
+			flex-direction: row;
+			backdrop-filter: blur(4px);
+			background-color: #06466325;
+			border-radius: 0.5rem;
+			padding: 0.25 0.5rem;
+		}
+
+		.hr {
+			display: none;
+		}
+	}
+}
