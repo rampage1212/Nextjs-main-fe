@@ -1,4 +1,6 @@
 import query from "../../helper/query";
+import readmeFromGithubLink from "../../helper/readmeFromGithubLink";
+import { BASE_URL } from "../constants";
 import ProjectDataContainer, { getBlogsDataPropsDataType } from "./dataTypes";
 
 export const PROJECT_DATA: ProjectDataContainer[] = [
@@ -6,7 +8,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
         {
             id: "spreadsheet",
             mainLink: "https://sheets.vaskrneup.com/",
-            projectDetailsMarkdownLink: "https://raw.githubusercontent.com/vercel/next.js/canary/docs/getting-started.md",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/GoogleSheetsClone"
+            }),
             projectImage: "/assets/images/project_demos/spreadsheet.png",
             projectName: "Spreadsheet",
             projectFor: "Leapfrog Technology, Internship",
@@ -24,6 +28,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             projectName: "Flappy Bird Game",
             projectFor: "Leapfrog Technology, Internship",
             githubLink: "https://github.com/vaskrneup/FlappyBird",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/FlappyBird"
+            }),
             demoLink: "http://flappybird.vaskrneup.com/",
             projectDescription: "I developed this game with plain HTML, CSS and Javascript in a single day during my internship in Leapfrog Technology. As I have never worked on making games, it was a difficult task. But like everything else, if you give it a try you can accomplish that without any issue",
             projectTags: ["project", "javascript", "html", "css", "game", "flappy-bird"]
@@ -33,7 +40,7 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
         {
             id: "kpn-staff-management-app",
             mainLink: "https://kkpn.pythonanywhere.com/",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: `${BASE_URL}/docs/projects/kpn_admin.md`,
             projectImage: "/assets/images/project_demos/kpn_admin.png",
             projectName: "KPN Admin",
             projectFor: "K.P.N. & Associates",
@@ -47,7 +54,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "phishing-site-destroyer",
             mainLink: "https://github.com/vaskrneup/PhishingSiteDestroyer",
             githubLink: "https://github.com/vaskrneup/PhishingSiteDestroyer",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/PhishingSiteDestroyer"
+            }),
             projectImage: "/assets/images/project_demos/phishing_site_destroyer.jpg",
             projectName: "Phishing Site Destroyer",
             projectFor: "Personal Project",
@@ -60,7 +69,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "nepse-data-analysis",
             mainLink: "https://github.com/vaskrneup/DataAnalysis",
             githubLink: "https://github.com/vaskrneup/DataAnalysis",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/DataAnalysis"
+            }),
             projectImage: "/assets/images/project_demos/NEPSE_analysis.jpg",
             projectName: "NEPSE Tools (Data Analysis)",
             projectFor: "Personal Project",
@@ -73,7 +84,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "command-based-discord-bot",
             mainLink: "https://github.com/vaskrneup/DiscordBot",
             githubLink: "https://github.com/vaskrneup/DiscordBot",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/DiscordBot"
+            }),
             projectImage: "/assets/images/project_demos/discord_bot.jpg",
             projectName: "Discord Bot",
             projectFor: "Personal Project",
@@ -86,7 +99,9 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "automated-ip-changer-using-tor",
             mainLink: "https://github.com/vaskrneup/IpChanger",
             githubLink: "https://github.com/vaskrneup/IpChanger",
-            projectDetailsMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/IpChanger/main/README.md",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/IpChanger"
+            }),
             projectImage: "/assets/images/project_demos/ip_changer.jpg",
             projectName: "TOR IP Changer",
             projectFor: "Personal Project",
@@ -100,9 +115,11 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             mainLink: "https://vaskrneup.github.io/JsBouncyBall/",
             githubLink: "https://github.com/vaskrneup/JsBouncyBall",
             demoLink: "https://vaskrneup.github.io/JsBouncyBall/",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/JsBouncyBall"
+            }),
             projectImage: "/assets/images/project_demos/js_bouncy_ball_image.png",
-            projectName: "1D Bouncy Ball",
+            projectName: "2D Bouncy Ball",
             projectFor: "Leapfrog Technology, Internship",
             projectDescription: "I made this simulation using plain Javascript, HTML and CSS during my internship in Leapfrog Technology. There were few maths involved here and there to make sure the collision happens in the best possible way, and making sure that the balls wont stuck. It was challenging and fun thing to figure out.",
             projectTags: ["project", "simulation", "html", "css", "js"]
@@ -113,7 +130,10 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "bash-clone-for-windows",
             mainLink: "https://github.com/vaskrneup/bash_V4",
             githubLink: "https://github.com/vaskrneup/bash_V4",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/bash_V4",
+                branch: "master"
+            }),
             projectImage: "/assets/images/project_demos/bash_v4.png",
             projectName: "Bash Clone for Windows",
             projectFor: "Personal Project",
@@ -126,7 +146,10 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "facebook-messenger-automation-script",
             mainLink: "https://github.com/vaskrneup/Messenger",
             githubLink: "https://github.com/vaskrneup/Messenger",
-            projectDetailsMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/Messenger/master/README.md",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/Messenger",
+                branch: "master"
+            }),
             projectImage: "/assets/images/project_demos/messenger_automation.jpg",
             projectName: "Facebook Messenger Automation",
             projectFor: "Personal Project",
@@ -139,7 +162,10 @@ export const PROJECT_DATA: ProjectDataContainer[] = [
             id: "twitter-data-scraper",
             mainLink: "https://github.com/vaskrneup/TwitterScraperAPI",
             githubLink: "https://github.com/vaskrneup/TwitterScraperAPI",
-            projectDetailsMarkdownLink: "",
+            projectDetailsMarkdownLink: readmeFromGithubLink({
+                link: "https://github.com/vaskrneup/TwitterScraperAPI",
+                branch: "master"
+            }),
             projectImage: "/assets/images/project_demos/twitter_scraping.jpg",
             projectName: "Twitter Data Scraper",
             projectFor: "Personal Project",

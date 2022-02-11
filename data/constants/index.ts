@@ -1,3 +1,5 @@
+export const BASE_URL = "http://localhost:3000";
+
 export const MY_PICTURE_URL = "/assets/images/personal/me.jpg";
 export const FAVICON_DEFAULT_URL = "/favicon.ico";
 

@@ -1,4 +1,5 @@
 import type { GetStaticProps } from 'next';
+import getConfig from "next/config";
 import Head from 'next/head';
 import HomeComponent from "../components/PageComponents/HomeComponent";
 import homeComponentsPropsDataType from "../components/PageComponents/HomeComponent/dataTypes";
