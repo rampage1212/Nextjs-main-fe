@@ -6,6 +6,8 @@ import AboutMePagesComponentPropsDataType from "../../AboutMePageComponent/dataT
 import homeComponentsPropsDataType from "../dataTypes";
 import Section from "../Section";
 import aboutMeStyles from "./AboutMe.module.scss";
+import myImage from "../../../../public/me.jpg";
+import Image from "next/image";
 
 const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentPropsDataType) => {
     return (
@@ -34,9 +36,13 @@ const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentProps
                         <div className={`${aboutMeStyles.section_body}`}>
                             <div className={aboutMeStyles.image_top}>
                                 <div className={`${aboutMeStyles.image_section}`}>
-                                    <img
+                                    {/* <img
                                         src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg"
                                         alt="Bhaskar Neupane"
+                                    /> */}
+                                    <Image
+                                        src={myImage}
+                                        alt="Picture of Bhaskar Neupane"
                                     />
                                 </div>
                             </div>
@@ -81,9 +87,13 @@ const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentProps
                                 </div>
 
                                 <div className={`${aboutMeStyles.image_section} ${aboutMeStyles.image_bottom}`}>
-                                    <img
+                                    {/* <img
                                         src="https://pbs.twimg.com/profile_images/1265216954408689665/IkEH5P_j_400x400.jpg"
                                         alt="Bhaskar Neupane"
+                                    /> */}
+                                    <Image
+                                        src={myImage}
+                                        alt="Picture of Bhaskar Neupane"
                                     />
                                 </div>
                             </div>
