@@ -6,6 +6,7 @@ import { getBlogsData } from "../data/blogs";
 import { FAVICON_DEFAULT_URL, MY_PICTURE_URL } from "../data/constants";
 import { getProjectData } from "../data/projects";
 import TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST from "../data/technologiesWorkedWith";
+import getAllFilePath from "../helper/getAllFilePath";
 
 const Home = (props: homeComponentsPropsDataType) => {
   return (
@@ -35,6 +36,8 @@ const Home = (props: homeComponentsPropsDataType) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  getAllFilePath("docs");
+
   return {
     props: {
       aboutMeData: TECHNOLOGIES_I_HAVE_WORKED_WITH_LIST.map(data => data.data),

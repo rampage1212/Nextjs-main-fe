@@ -4,8 +4,8 @@ export const URL_PATH: urlPathDataType = {
     homePage: () => "/",
     aboutMe: () => "/about-me",
     projectsListView: () => "/projects",
-    projectsDetailView: (projectId: string) => `/projects/${projectId}`,
+    projectsDetailView: (projectId: string) => `/docs/projects/${projectId}`,
     blogsListView: () => "/blogs",
-    blogsDetailView: (blogId: string) => `/blogs/${blogId}`,
+    blogsDetailView: (blogId: string) => `/docs/blogs/${blogId}`,
     contactMe: () => "/contact-me"
 };

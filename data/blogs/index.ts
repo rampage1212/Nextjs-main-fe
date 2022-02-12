@@ -1,4 +1,5 @@
 import query from "../../helper/query";
+import { URL_PATH } from "../urlPath";
 import BlogDataContainer, { getBlogsDataPropsDataType } from "./dataTypes";
 
 const BLOG_DATA: BlogDataContainer[] = [
@@ -9,7 +10,7 @@ const BLOG_DATA: BlogDataContainer[] = [
         blogTags: ["blog", "test"],
         creationDate: "Jan 17, 2022",
         readTime: "3 Min",
-        blogMarkdownLink: "https://raw.githubusercontent.com/vaskrneup/main-fe/main/src/blog_data/testBlog.md",
+        blogMarkdownLink: URL_PATH.blogsDetailView("first-blog"),
         imageUrl: "/assets/images/blogs/first-blog.jpg"
     }),
 ];

@@ -1,6 +1,5 @@
 import query from "../../helper/query";
 import readmeFromGithubLink from "../../helper/readmeFromGithubLink";
-import { BASE_URL } from "../constants";
 import ProjectDataContainer, { getBlogsDataPropsDataType } from "./dataTypes";
 
 export const PROJECT_DATA: ProjectDataContainer[] = [
