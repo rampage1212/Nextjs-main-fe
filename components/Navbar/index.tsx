@@ -8,7 +8,11 @@ import navbarStyles from "./Navbar.module.scss";
 
 const getActiveStyleIfCurrentPage = (linkPath: string) => {
     if (isBrowser()) {
-        return window.location.pathname.startsWith(linkPath) ? navbarStyles.active_link : "";
+        return (
+            window.location.pathname.startsWith(linkPath) ||
+            window.location.pathname.startsWith(`/docs${linkPath}`)
+        ) ?
+            navbarStyles.active_link : "";
     }
     return "";
 };
