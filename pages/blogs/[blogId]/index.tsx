@@ -17,7 +17,6 @@ const BlogDetailPage = (props: blogDetailViewPropsDataType) => {
                     imageUrl: props.blogData.imageUrl,
                     title: props.blogData.blogTitle,
                     type: "blog",
-                    url: "https://vaskrneup.com"
                 }}
                 keywords={props.blogData.blogTags}
                 twitterSpecificMetaData={{

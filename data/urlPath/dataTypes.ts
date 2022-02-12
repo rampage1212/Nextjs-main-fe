@@ -6,4 +6,5 @@ export default interface urlPathDataType {
     blogsListView: (_?: string) => string;
     blogsDetailView: (blogId: string) => string;
     contactMe: (_?: string) => string;
+    docs: (path: string) => string;
 }

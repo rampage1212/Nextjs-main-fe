@@ -1,9 +1,13 @@
 import { GetStaticProps } from "next";
+import getConfig from "next/config";
 import blogListViewPropsDataType from "../../components/PageComponents/BlogsListVIewComponent/dataType";
 import BlogsComponent from "../../components/PageComponents/HomeComponent/Blogs";
 import MetaManager from "../../components/utils/MetaManager";
-import { getBlogsData } from "../../data/blogs";
+import BLOG_DATA, { getBlogsData } from "../../data/blogs";
 import { META_IMAGES } from "../../data/constants";
+import { URL_PATH } from "../../data/urlPath";
+import fs from "fs";
+import createFile from "../../helper/fileSystem/createFile";
 
 const Blogs = (props: blogListViewPropsDataType) => {
     return (
@@ -16,7 +20,6 @@ const Blogs = (props: blogListViewPropsDataType) => {
                     imageUrl: META_IMAGES.blogImage,
                     title: `${props.blogsData.length} blogs`,
                     type: "blog",
-                    url: "https://vaskrneup.com"
                 }}
                 keywords={["Blogs", "Programming", "Programming Blogs", "Photography Blogs"]}
                 twitterSpecificMetaData={{
@@ -32,6 +35,34 @@ const Blogs = (props: blogListViewPropsDataType) => {
 };
 
 export const getStaticProps: GetStaticProps = () => {
+    let fileCreationCount = 0;
+
+    BLOG_DATA.forEach(data => {
+        const fileContent: string = `
+---
+title: ${data.data.blogTitle}
+author: Bhaskar Neupane
+description: ${data.data.blogDescription}
+imageUrl: ${data.data.imageUrl}
+metaTitle: ${data.data.blogTitle}
+type: blog
+keywords: ${data.data.blogTags.join(", ")}
+---
+# ${data.data.blogTitle}
+`.trim();
+
+        if (createFile({
+            fileContent: fileContent,
+            folderPath: URL_PATH.blogsDetailView(data.data.id)
+        })) {
+            fileCreationCount++;
+        }
+    });
+
+    if (fileCreationCount > 0) {
+        console.log(`[!] ${fileCreationCount} files created.`);
+    }
+
     return {
         props: {
             blogsData: getBlogsData({ numberOfBlogs: 99 }).map(data => data.data),

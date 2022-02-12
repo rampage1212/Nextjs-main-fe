@@ -13,7 +13,6 @@ const ContactMe = () => {
                     imageUrl: META_IMAGES.contactImage,
                     title: "Contact Bhaskar Neupane",
                     type: "website",
-                    url: "https://vaskrneup.com"
                 }}
                 keywords={["contact", "Bhaskar Neupane", "vaskrneup"]}
                 twitterSpecificMetaData={{

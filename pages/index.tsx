@@ -24,7 +24,6 @@ const Home = (props: homeComponentsPropsDataType) => {
           description: "I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer.",
           imageUrl: MY_PICTURE_URL,
           type: "website",
-          url: "https://vaskrneup.com"
         }}
       />
 

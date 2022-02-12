@@ -15,7 +15,6 @@ const MasterErrorPage = (props: masterErrorPagePropsDataType) => {
                     author: "Bhaskar Neupane",
                     description: props.errorDescription,
                     type: "website",
-                    url: "https://vaskrneup.com"
                 }}
             />
 

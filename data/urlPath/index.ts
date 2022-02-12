@@ -7,5 +7,6 @@ export const URL_PATH: urlPathDataType = {
     projectsDetailView: (projectId: string) => `/docs/projects/${projectId}`,
     blogsListView: () => "/blogs",
     blogsDetailView: (blogId: string) => `/docs/blogs/${blogId}`,
-    contactMe: () => "/contact-me"
+    contactMe: () => "/contact-me",
+    docs: (path: string) => `/docs/${path}`,
 };

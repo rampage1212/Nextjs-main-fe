@@ -18,7 +18,6 @@ const ProjectDetailView = (props: projectDetailViewPropsDataType) => {
                     imageUrl: props.projectData.projectImage,
                     title: props.projectData.projectName,
                     type: "blog",
-                    url: "https://vaskrneup.com"
                 }}
                 keywords={props.projectData.projectTags}
                 twitterSpecificMetaData={{
@@ -37,7 +36,7 @@ const getRawMarkdown = async (markdownPathOrUrl: string) => {
     let markdownData = undefined;
 
     if (markdownPathOrUrl.startsWith("/")) {
-        const filePath = `${getConfig().serverRuntimeConfig?.basePath}\\public\\${markdownPathOrUrl}`
+        const filePath = `${getConfig().serverRuntimeConfig?.basePath}\\public${markdownPathOrUrl}`
             .replaceAll("\\", "/");
 
         markdownData = fs.readFileSync(

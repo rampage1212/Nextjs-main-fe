@@ -17,7 +17,6 @@ const AboutMe = (props: AboutMePagesComponentPropsDataType) => {
                     title: "About Me",
                     imageUrl: META_IMAGES.aboutMeImage,
                     type: "blog",
-                    url: "https://vaskrneup.com"
                 }}
                 twitterSpecificMetaData={{
                     card: "summary_large_image"
