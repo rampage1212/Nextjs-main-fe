@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { ANALYTICS_CATEGORIES_ACTIVATOR, ANALYTICS_CATEGORY_TYPES } from "../../../data/constants";
 import { projectDataContainerPropsDataType } from "../../../data/projects/dataTypes";
 import { URL_PATH } from "../../../data/urlPath";
 import Chip from "../../utils/Chip";
@@ -54,6 +55,7 @@ const ProjectViewCard = (props: projectDataContainerPropsDataType) => {
                                     href={props.githubLink}
                                     target={"_blank"}
                                     rel="noreferrer"
+                                    onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.projectGithubLinkClick, props.githubLink)}
                                 >
                                     <i className="fab fa-github link-btn" aria-hidden></i>
                                 </a>
@@ -70,6 +72,7 @@ const ProjectViewCard = (props: projectDataContainerPropsDataType) => {
                                         href={props.demoLink}
                                         target={"_blank"}
                                         rel="noreferrer"
+                                        onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.projectDemoLinkClick, props.demoLink)}
                                     >
                                         <i className="fas fa-external-link-alt link-btn" aria-hidden></i>
                                     </a>

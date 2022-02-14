@@ -1,3 +1,4 @@
+import { ANALYTICS_CATEGORIES_ACTIVATOR, ANALYTICS_CATEGORY_TYPES } from "../../../../data/constants";
 import utilsStyle from "../../../../styles/Utils.module.scss";
 import layoutStyle from "../../../Layout/Layout.module.scss";
 import Section from "../Section";
@@ -22,6 +23,7 @@ const Intro = () => {
                             target={"_blank"}
                             rel="noreferrer"
                             className={`${infoStyle.resume_btn} btn btn-link`}
+                            onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.resumeLinkClick, "https://drive.google.com/file/d/1516EXritCUF9ReQJXspGLepwF6mNbaaz/view?usp=sharing")}
                         >
                             RESUME
                         </a>

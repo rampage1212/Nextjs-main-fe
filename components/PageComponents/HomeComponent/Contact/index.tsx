@@ -1,3 +1,4 @@
+import { ANALYTICS_ACTION_TYPES, ANALYTICS_CATEGORIES_ACTIVATOR, ANALYTICS_CATEGORY_TYPES } from "../../../../data/constants";
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import layoutStyles from "../../../Layout/Layout.module.scss";
 import contactStyle from "./Contact.module.scss";
@@ -11,7 +12,7 @@ const Contact = () => {
 
                     <div className={contactStyle.section_body}>
                         <p className={contactStyle.personal_statement}>
-                            Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className={utilsStyles.animated_line} >bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
+                            Wether you have a question, want to talk about tech or project collaboration, or  just want to say hi. My inbox is always open. You can directly email me at <a href="mailto:bhaskar@vaskrneup.com" className={utilsStyles.animated_line} onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.sendEmailLinkClick, "bhaskar@vaskrneup.com")}>bhaskar@vaskrneup.com</a> or say hello using the following form or connect with me in any of my social media account. I&apos;ll get back to you as soon as possible!
                         </p>
                         <div className={contactStyle.form_container}>
                             <form action="https://formsubmit.co/bhaskar@vaskrneup.com" method="POST">
@@ -54,6 +55,7 @@ const Contact = () => {
                                     type="submit"
                                     value="Say Hello!"
                                     className="btn"
+                                    onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.contactFormSubmission, "bhaskar@vaskrneup.com")}
                                 />
                             </form>
                         </div>

@@ -1,4 +1,4 @@
-import { MY_PICTURE_URL } from "../../../../data/constants";
+import { ANALYTICS_CATEGORIES_ACTIVATOR, ANALYTICS_CATEGORY_TYPES, MY_PICTURE_URL } from "../../../../data/constants";
 import { technologiesWorkedWithPropsDataType } from "../../../../data/technologiesWorkedWith/dataTypes";
 import utilsStyles from "../../../../styles/Utils.module.scss";
 import TechnologyViewCard from "../../../cards/TechnologyViewCard";
@@ -51,7 +51,7 @@ const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentProps
                                         Currently, I am working as a Full-Stack Developer using several Technologies. Additionally, I am learning about Machine and Deep Learning and am looking forward to learn hardware side of things too.
                                     </p>
                                     <p>
-                                        I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className={utilsStyles.link} rel="noreferrer">instagram</a>.
+                                        I love to capture memories, it helps to break pattern and helps me stay creative and have a fresh mind. I have few images that I have captured in my <a href="https://instagram.com/vaskrneup" target={"_blank"} className={utilsStyles.link} rel="noreferrer" onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.socialSiteLinkClick, "https://instagram.com/vaskrneup")}>instagram</a>.
                                     </p>
 
                                     <p className={aboutMeStyles.technologies_title}>
@@ -68,6 +68,7 @@ const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentProps
                                                             key={data.url}
                                                             target={"_blank"}
                                                             rel="noreferrer"
+                                                            onClick={ANALYTICS_CATEGORIES_ACTIVATOR.activator(ANALYTICS_CATEGORY_TYPES.technologiesUsedClick, data.url)}
                                                         >
                                                             <TechnologyViewCard
                                                                 image={data.icon}
