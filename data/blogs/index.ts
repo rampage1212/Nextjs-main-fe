@@ -13,6 +13,16 @@ const BLOG_DATA: BlogDataContainer[] = [
         blogMarkdownLink: URL_PATH.blogsDetailView("first-blog"),
         imageUrl: "/assets/images/blogs/first-blog.jpg"
     }),
+    new BlogDataContainer({
+        id: "development-of-nepse-tools",
+        blogTitle: "Development of NEPSE Tools",
+        blogDescription: "Automate tasks related to Nepalese share market. Supports meroshare and TMS.",
+        blogTags: ["blog", "python", "data-analysis", "nepse", "stock"],
+        creationDate: "Feb 16, 2022",
+        readTime: "1 Min",
+        blogMarkdownLink: URL_PATH.blogsDetailView("development-of-nepse-tools"),
+        imageUrl: "/assets/images/project_demos/NEPSE_analysis.jpg"
+    }),
 ];
 
 export const getBlogsData = (data: getBlogsDataPropsDataType): BlogDataContainer[] => {
