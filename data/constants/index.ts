@@ -5,7 +5,7 @@ export const BASE_URL = "http://localhost:3000";
 export const MY_PICTURE_URL = "/assets/images/personal/me.jpg";
 export const FAVICON_DEFAULT_URL = "/favicon.ico";
 
-export const GOOGLE_ANALYTICS_CODE = "G-LRL12W2DCJ";
+export const GOOGLE_ANALYTICS_CODE = "UA-216138233-1";
 
 export enum ANALYTICS_ACTION_TYPES {
     click = "click",
