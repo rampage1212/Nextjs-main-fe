@@ -45,7 +45,7 @@ const AboutMe = (props: homeComponentsPropsDataType | AboutMePagesComponentProps
                             <div className={aboutMeStyles.section_body_main}>
                                 <div className={aboutMeStyles.data_section}>
                                     <p>
-                                        Hi! my name is Bhaskar Neupane. I am a recent A-Levels graduate and a Full-Stack software developer based in Kathmandu, Nepal. My passion for programming started back in 2015 when I wrote my first proper program using QBasic to solve quadratic equations. Turns out making computer do my maths homework was a fun place to start my journey as a problem solver.
+                                        Hi! my name is Bhaskar Neupane. I am a recent A-Levels graduate and a Full-Stack software developer based in Toronto, Canada. My passion for programming started back in 2015 when I wrote my first proper program using QBasic to solve quadratic equations. Turns out making computer do my maths homework was a fun place to start my journey as a problem solver.
                                     </p>
                                     <p>
                                         Currently, I am working as a Full-Stack Developer using several Technologies. Additionally, I am learning about Machine and Deep Learning and am looking forward to learn hardware side of things too.
