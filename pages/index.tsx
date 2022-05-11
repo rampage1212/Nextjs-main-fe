@@ -21,7 +21,7 @@ const Home = (props: homeComponentsPropsDataType) => {
         baseMetaData={{
           title: "Bhaskar Neupane",
           author: "Bhaskar Neupane",
-          description: "I'm a recent A-Levels graduate and a Full-Stack Developer based in Kathmandu, Nepal. Currently, I am learning about Machine Learning and working as a Freelancer.",
+          description: "I'm a recent A-Levels graduate and a Full-Stack Developer based in Toronto, Canada. Currently, I am learning about Machine Learning and working as a Freelancer.",
           imageUrl: MY_PICTURE_URL,
           type: "website",
         }}
