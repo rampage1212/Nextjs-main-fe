@@ -1,14 +1,17 @@
-import MetaManager from "../../../components/utils/MetaManager";
-import {META_IMAGES} from "../../../data/constants";
-import {useRouter} from 'next/router'
-import {useEffect} from "react";
+import MetaManager from "../../components/utils/MetaManager";
+import {META_IMAGES} from "../../data/constants";
+import {useEffect, useState} from "react";
 
-const ContactMe = () => {
-    const url = new URL(window.location.href);
-    const number = url.searchParams.get("number")
+const Call = () => {
+    const [number, setNumber] = useState<String | undefined>(undefined);
 
     useEffect(() => {
-        document.getElementById("call-link")?.click()
+        const url = new URL(window.location.href);
+        setNumber(url.searchParams.get("number")?.toString());
+
+        setTimeout(() => {
+            document.getElementById("call-link")?.click();
+        }, 1);
     }, [])
 
     return (
@@ -29,11 +32,11 @@ const ContactMe = () => {
             />
             <br/><br/>
             <br/><br/>
-            <a href="tel:{number}" id={"call-link"}>
+            <a href={`tel:${number}`} id={"call-link"}>
                 Calling {number}, if it doesn&apos;t happen automatically click here!
             </a>
         </>
     );
 };
 
-export default ContactMe;
+export default Call;
