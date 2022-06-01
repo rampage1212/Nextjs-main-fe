@@ -4,8 +4,8 @@ import {useRouter} from 'next/router'
 import {useEffect} from "react";
 
 const ContactMe = () => {
-    const router = useRouter();
-    const {number} = router.query;
+    const url = new URL(window.location.href);
+    const number = url.searchParams.get("number")
 
     useEffect(() => {
         document.getElementById("call-link")?.click()
