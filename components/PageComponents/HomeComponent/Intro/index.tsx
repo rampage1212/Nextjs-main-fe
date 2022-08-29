@@ -19,7 +19,7 @@ const Intro = () => {
                             Hello! I&apos;m a recent A-Levels graduate and a Full-Stack Developer based in Toronto, Canada. Currently, I am learning about Machine Learning and working as a Freelancer.
                         </p>
                         <a
-                            href="https://drive.google.com/file/d/1516EXritCUF9ReQJXspGLepwF6mNbaaz/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1T5ylRVGZAIy6kfaZViSfaj1ePzqCu2RX/view?usp=sharing"
                             target={"_blank"}
                             rel="noreferrer"
                             className={`${infoStyle.resume_btn} btn btn-link`}
